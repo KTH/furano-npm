@@ -1,0 +1,23 @@
+{
+    "name": "furano-npm",
+    "preferGlobal": true,
+    "version": "0.1.0",
+    "author": "Jens Tinglev <tinglev@kth.se>",
+    "description": "Usability package for furano",
+    "license": "MIT",
+    "engines": {
+        "node": ">=12.3"
+    },
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "mocha tests.js"
+    },
+    "dependencies": {
+        "node-fetch": "~2.6.0"
+    },
+    "devDependencies": {
+        "tape": "~4.9.1",
+        "rewire": "~4.0.1"
+    }
+}
