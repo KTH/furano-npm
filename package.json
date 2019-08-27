@@ -1,7 +1,7 @@
 {
     "name": "furano-npm",
     "preferGlobal": true,
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Jens Tinglev <tinglev@kth.se>",
     "description": "Usability package for furano",
     "license": "MIT",
@@ -11,7 +11,8 @@
     "main": "index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "mocha tests.js"
+        "test": "node tests.js",
+        "build": "npm test"
     },
     "dependencies": {
         "node-fetch": "~2.6.0"
