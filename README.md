@@ -1,4 +1,4 @@
-# furano-npm
+# furano-npm  ![alt text](https://api.travis-ci.org/KTH/furano-npm.svg?branch=master)
 
 An npm package for usage with a json validation service. In KTHs case that's a project called furano.
 

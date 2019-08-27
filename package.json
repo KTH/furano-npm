@@ -2,8 +2,12 @@
     "name": "furano-npm",
     "preferGlobal": true,
     "version": "0.1.1",
-    "author": "Jens Tinglev <tinglev@kth.se>",
     "description": "Usability package for furano",
+    "author": {
+        "name": "KTH",
+        "email": "infosys@kth.se",
+        "url": "https://github.com/KTH"
+    },
     "license": "MIT",
     "engines": {
         "node": ">=12.3"
