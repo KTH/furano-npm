@@ -56,13 +56,14 @@ const result = (valid, validationError = null) => {
  * @param {*} jsonToValidate The json to validate.
  */
 const validate = async (schemaPath, jsonToValidate) => {
-  let post = await fetch(getUrl(schemaPath), getPostData(jsonToValidate)).catch(
-    err => {
-      throw err;
-    }
-  );
+  const post = await fetch(
+    getUrl(schemaPath),
+    getPostData(jsonToValidate)
+  ).catch(err => {
+    throw err;
+  });
 
-  let validationError = await post.json().catch(err => {
+  const validationError = await post.json().catch(err => {
     throw err;
   });
 
