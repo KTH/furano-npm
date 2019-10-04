@@ -1,14 +1,14 @@
-# furano-npm  ![alt text](https://api.travis-ci.org/KTH/furano-npm.svg?branch=master)
+# furano-npm ![alt text](https://api.travis-ci.org/KTH/furano-npm.svg?branch=master)
 
 An npm package for usage with a json validation service. In KTHs case that's a project called furano.
 
 ## How to use
 
-* Add `furano-npm` to your `package.json`
+- Add `furano-npm` to your `package.json`
 
-* Call using:
+- Call using:
 
-```js
+```javascript
 const furano-npm = require('furano-npm')
 
 furano-npm.validate('app/schema', {'my': 'data'})
