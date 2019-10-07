@@ -1,11 +1,13 @@
-var fetch = require("node-fetch");
+const fetch = require("node-fetch");
+
+const DEFAULT_SERVICE_URL = "https://app.kth.se/jsonschema";
 
 /**
  * Get the url to the validation service.
  * If the env FURANO_HOST is set, this value is used.
  */
 const getServiceUrl = () => {
-  return process.env.FURANO_HOST || "https://app.kth.se/jsonschema";
+  return process.env.FURANO_HOST || DEFAULT_SERVICE_URL;
 };
 
 /**
