@@ -52,6 +52,18 @@ const result = (valid, validationError = null) => {
 };
 
 /**
+ * Unitilty function for readability.
+ * @param {*} errorMessage possible error from the Furano service.
+ * @param {*} statusCode Returned statuscode from the Furano service.
+ */
+const isValidationError = (errorMessage, statusCode) => {
+  if (errorMessage && statusCode !== 200) {
+    return true;
+  }
+  return false;
+};
+
+/**
  * Validate json against a schema published under a path.
  * furano-npm.validate('app/schema', {'my': 'data'})
  * @param {*} schemaPath Path to the json schema relative the service url.
@@ -65,12 +77,12 @@ const validate = async (schemaPath, jsonToValidate) => {
     throw err;
   });
 
-  const validationError = await post.json().catch(err => {
+  const errorMessage = await post.json().catch(err => {
     throw err;
   });
 
-  if (validationError && post.status !== 200) {
-    return result(false, validationError);
+  if (isValidationError(errorMessage, post.status)) {
+    return result(false, errorMessage);
   } else {
     return result(true);
   }
