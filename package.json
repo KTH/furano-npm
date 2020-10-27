@@ -16,14 +16,15 @@
     "scripts": {
         "start": "node index.js",
         "test": "node ./test/tests.js | ./node_modules/.bin/tap-spec",
-        "build": "npm test"
+        "build": "npm test",
+        "clean": "rm -r ./node_modules && rm package-lock.json"
     },
     "dependencies": {
-        "node-fetch": "~2.6.0"
+        "node-fetch": "~2.6.1"
     },
     "devDependencies": {
-        "rewire": "~4.0.1",
+        "rewire": "~5.0.0",
         "tap-spec": "^5.0.0",
-        "tape": "~4.9.1"
+        "tape": "~5.0.1"
     }
 }
