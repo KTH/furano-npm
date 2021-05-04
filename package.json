@@ -17,7 +17,8 @@
         "start": "node index.js",
         "test": "node ./test/tests.js | ./node_modules/.bin/tap-spec",
         "build": "npm test",
-        "clean": "rm -r ./node_modules && rm package-lock.json"
+        "clean": "rm -r ./node_modules && rm package-lock.json",
+        "package-update": "git pull && npm run clean & ncu -u && npm install && npm test"
     },
     "dependencies": {
         "node-fetch": "~2.6.1"
@@ -25,6 +26,6 @@
     "devDependencies": {
         "rewire": "~5.0.0",
         "tap-spec": "^5.0.0",
-        "tape": "~5.0.1"
+        "tape": "~5.2.2"
     }
 }
