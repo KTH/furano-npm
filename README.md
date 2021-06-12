@@ -1,4 +1,4 @@
-# furano-npm ![alt text](https://api.travis-ci.org/KTH/furano-npm.svg?branch=master)
+# furano-npm ![alt text](https://api.travis-ci.org/KTH/furano-npm.svg?branch=master) ![Continous Integration](https://github.com/KTH/furano-npm/actions/workflows/main.yml/badge.svg)
 
 An npm package for usage with a json validation service. In KTHs case that's a project called furano.
 
